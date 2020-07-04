@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shake_Me_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="-unsplash 2" translatesAutoresizingMaskIntoConstraints="NO" id="kuM-UL-m43">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake My Head!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmE-vm-CmG">
+                                <rect key="frame" x="4.5" y="50" width="311" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCg-Ab-1dU">
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <state key="normal" title="Start Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.57380741830000004" green="0.29617080779999999" blue="0.31261216120000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏾" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AeG-7y-mHi">
+                                <rect key="frame" x="82.5" y="198.5" width="155" height="171"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="143"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQf-Ny-v9R">
+                                <rect key="frame" x="136.5" y="133" width="47" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNx-xE-7UV">
+                                <rect key="frame" x="102" y="445" width="116" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kuM-UL-m43" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1pQ-WQ-8T5"/>
+                            <constraint firstItem="tQf-Ny-v9R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Em-Vu-VTN"/>
+                            <constraint firstItem="oCg-Ab-1dU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4iC-xr-v9X"/>
+                            <constraint firstItem="kuM-UL-m43" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AzI-3G-IGl"/>
+                            <constraint firstItem="kuM-UL-m43" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CeC-cC-vXT"/>
+                            <constraint firstItem="tmE-vm-CmG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IVv-AC-spG"/>
+                            <constraint firstItem="oCg-Ab-1dU" firstAttribute="top" secondItem="ZNx-xE-7UV" secondAttribute="bottom" constant="15" id="KTn-2h-4ey"/>
+                            <constraint firstItem="oCg-Ab-1dU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NEG-bZ-XtK"/>
+                            <constraint firstAttribute="bottom" secondItem="kuM-UL-m43" secondAttribute="bottom" id="QY6-UZ-ECG"/>
+                            <constraint firstItem="tmE-vm-CmG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="S81-OO-CNJ"/>
+                            <constraint firstItem="AeG-7y-mHi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WzN-av-5qC"/>
+                            <constraint firstItem="tQf-Ny-v9R" firstAttribute="top" secondItem="tmE-vm-CmG" secondAttribute="bottom" constant="35" id="ftQ-IA-AM0"/>
+                            <constraint firstItem="AeG-7y-mHi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gVx-jj-Thw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZNx-xE-7UV" secondAttribute="trailing" constant="102" id="lZC-cT-Nmq"/>
+                            <constraint firstItem="ZNx-xE-7UV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r7T-4p-vpA"/>
+                            <constraint firstItem="oCg-Ab-1dU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xHl-cZ-5mu"/>
+                            <constraint firstItem="ZNx-xE-7UV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="xhj-FX-LdP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="99.295774647887328"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="-unsplash 2" width="3648" height="5472"/>
+    </resources>
 </document>
